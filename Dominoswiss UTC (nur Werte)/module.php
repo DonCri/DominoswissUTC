@@ -52,7 +52,7 @@ class UTCWerte extends IPSModule {
 	    switch($command)
 	    {
 	        case 35:
-	              SetValue($this->GetIDForIdent("temperatur", $data->Values->Value/2-20));
+	            SetValue($this->GetIDForIdent("temperatur"), $data->Values->Value/2-20));
 	        break;
 	            
 	        case 36:
