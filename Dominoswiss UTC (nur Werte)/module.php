@@ -18,9 +18,19 @@ class UTCWerte extends IPSModule {
         public function Create() {
             // Diese Zeile nicht löschen.
 		parent::Create();
-
-		 $this->RegisterVariableInteger("light", "Lichtsensor", "", "0");
-		 $this->RegisterVariableFloat("temperatur", "Temperatur", "", "1");
+        
+		 // Property für ID
+		 $this->RegisterPropertyInteger("ID", 0);
+		 
+		 // Profil für Temperatur und Lichtfühler
+		 
+		 
+		
+		 // Variablen für Fühler
+		 $this->RegisterVariableInteger("light", "Lichtsensor", "~Illumination", "0");
+		 $this->RegisterVariableFloat("temperatur", "Temperatur", "~Temperature", "1");
+		 
+		 $this->ConnectParent("{1252F612-CF3F-4995-A152-DA7BE31D4154}"); //DominoSwiss eGate
  
         }
  
