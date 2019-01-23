@@ -19,8 +19,8 @@ class UTCWerte extends IPSModule {
             // Diese Zeile nicht löschen.
 		parent::Create();
 
-		 $this->RegisterVariableString("light", "Lichtsensor", "", "0");
-		 $this->RegisterVariableString("temperatur", "Temperatur", "", "1");
+		 $this->RegisterVariableFloat("light", "Lichtsensor", "", "0");
+		 $this->RegisterVariableFloat("temperatur", "Temperatur", "", "1");
  
         }
  
@@ -51,6 +51,10 @@ class UTCWerte extends IPSModule {
 	    $command = $data->Values->Command;
 	    switch($command)
 	    {
+	        case 35:
+	              SetValue($this->GetIDForIdent("temperatur", $data->Values->Value/2-20));
+	        break;
+	            
 	        case 36:
 	            SetValue($this->GetIDForIdent("light"), 0.1*10**(0.05*$data->Values->Value));
 	         break;
