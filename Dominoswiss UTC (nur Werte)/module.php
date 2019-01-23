@@ -19,7 +19,7 @@ class UTCWerte extends IPSModule {
             // Diese Zeile nicht löschen.
 		parent::Create();
 
-		 $this->RegisterVariableString("light", "eGate Werte Test", "", "0");
+		 $this->RegisterVariableString("light", "Lichtsensor", "", "0");
 		 $this->RegisterVariableString("temperatur", "Temperatur", "", "1");
  
         }
