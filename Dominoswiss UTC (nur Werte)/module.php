@@ -48,11 +48,11 @@ class UTCWerte extends IPSModule {
 	    $data = json_decode($JSONString);
  
 	    // Datenverarbeitung und schreiben der Werte in die Statusvariablen
-	    $command = $data->Value->Command;
+	    $command = $data->Values->Command;
 	    switch($command)
 	    {
 	        case 36:
-	            SetValue($this->GetIDForIdent("light"), 0.1*10**(0.05*$data->Value->Value));
+	            SetValue($this->GetIDForIdent("light"), 0.1*10**(0.05*$data->Values->Value));
 	         break;
 	    }
 	    
