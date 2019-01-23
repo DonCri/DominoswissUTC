@@ -1,6 +1,6 @@
 {
   "elements":
   [
-  	{ "Typ" : "NumberSpinner" , "name" : "ID", "caption" : "ID"}
+  	{ "type" : "NumberSpinner" , "name" : "ID", "caption" : "ID"}
   ]
 }
