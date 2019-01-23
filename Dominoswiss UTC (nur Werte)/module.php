@@ -19,7 +19,7 @@ class UTCWerte extends IPSModule {
             // Diese Zeile nicht löschen.
 		parent::Create();
 
-		 $this->RegisterVariableFloat("light", "Lichtsensor", "", "0");
+		 $this->RegisterVariableInteger("light", "Lichtsensor", "", "0");
 		 $this->RegisterVariableFloat("temperatur", "Temperatur", "", "1");
  
         }
